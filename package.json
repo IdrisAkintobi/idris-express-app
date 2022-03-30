@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "tsc": "./node_modules/typescript/bin/tsc",
-    "start": "tsc && node ./bin/www",
-    "test": "jest"
+    "start": "node ./bin/www",
+    "build": "tsc"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -27,5 +26,8 @@
     "jest": "^27.5.1",
     "supertest": "^6.2.2",
     "ts-jest": "^27.1.4"
+  },
+  "engines": {
+    "node": "16.14.0"
   }
 }
