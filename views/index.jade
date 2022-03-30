@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{name} #{title} project
+  br
+  br
+  h3 Usage 
+  hr
+  p GET '/api/users': Shows all users in the database 
+  p GET 'api/users/:id': Shows the data of the id
+  p PUT 'api/users/:id': Edits the data of the id to the body data
+  p DELETE 'api/users/:id': De;ete the data with the id from database
