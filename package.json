@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "yarn tsc && node ./bin/www",
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "start": "tsc && node ./bin/www",
     "test": "jest"
   },
   "dependencies": {
