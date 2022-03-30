@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "tsc && node ./bin/www",
+    "start": "yarn tsc && node ./bin/www",
     "test": "jest"
   },
   "dependencies": {
