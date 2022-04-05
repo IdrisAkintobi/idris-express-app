@@ -1,21 +1,25 @@
 # EXPRESS 
 
-### Setup
-1. Convert everything to typescript and leverage ES6 syntax
-2. Use and setup the project with `Yarn`
+### #
+1. Project written in typescript
+2. Use `Yarn` to install dependencies
 
-## Problem Description:
+## escription:
 
-Create A basic Express application, that makes a CRUD operation (create, read, update, delete) into a file database.json, document and publish your endpoints using postman.
+Create A basic Express application, that makes a CRUD operation (create, read, update, delete) into a file database.json.
+
 
 ## How will I complete this project?
 - Your aplication should be able to perform.
   - `GET` Request which returns all the data in your database.json data
-  - `POST` Request which adds data to your database.json file (Note: If there is no database.json on post, create one dynamically). Also, when posting data, the id, createdAt and updatedAt fields should be generated dynamically. The createdAt and updatedAt fields should be the current date in the format given below and the id can be generated randomly by an external package or through a custom auto increment logic done by you.
-  - `PUT` Request which updates fields of a particular data using the id in the database.json file. If an object with the id sent in the request is not found in the database.json file, return a 404 response. Also, the id, createdAt and updatedAt fields should not be updated by the input from postman. The id and createdAt fields are to remain the same as they were at the point of creation while the updatedAt field should be changed dynamically to the current date whenever any field is updated.
-  - `DELETE` Request which removes a particular data from your database.json file using the id. If an object with the id sent in the request is not found in the database.json file, return a 404 response
+  - `POST` Request which adds data to your database.json file (Note: If there is no database.json on post, create one dynamically). Also, when posting data, the id, createdAt and updatedAt fields are generated dynamically. id are generated with the data position.
+  - `PUT` Request updates fields of a particular data using the id in the database.json file. If an object with the id sent in the request is not found in the database.json file, 404 status is responded. Also, the id, createdAt and updatedAt fields cannot be updated by the input. The id and createdAt fields remains the same as they were at the point of creation while the updatedAt field changes dynamically to the current date whenever any field is updated.
+  - `DELETE` Request removes a particular data from your database.json file using the id. If the object with the id sent in the request is not found in the database.json file, a 404 response is returned.
 
-- Host your application on Heroku
+- Heroku link
+https://idris-express-app.herokuapp.com
+
+
 - Data format example:
 
 ```
@@ -37,7 +41,7 @@ Create A basic Express application, that makes a CRUD operation (create, read, u
 ```
 
 ## Test coverage
-- Make sure you write test to cover your application using supertest and jest
+- Test is written to using supertest and jest
 
 ### Test
 - Test for a GET request
@@ -46,5 +50,7 @@ Create A basic Express application, that makes a CRUD operation (create, read, u
 - Test for a DELETE request
 - Test to return proper HTTP status codes and response bodies
 
-## Stretch Goals
-- Validate all input coming to your server to ensure they have the required format and all fields have the specified types e.g organization should be a string and noOfEmployees should be a number
+## Input validation
+- All inputs are validated using my created validation code.
+
+### Thanks 🙂
